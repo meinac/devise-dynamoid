@@ -1,5 +1,8 @@
 # Dynamoid for Devise
 
+## Disclaimer: this is a work in progress, nothing is tested or working
+
+
 `devise-dynamoid` will let you use [devise](http://github.com/plataformatec/devise) with [Dynamoid](http://github.com/jnunemaker/mongomapper).
 
 `devise-dynamoid` is intended for use with `Rails 3.2.x` and `Devise 2` and above. It may work with earlier versions of devise.
