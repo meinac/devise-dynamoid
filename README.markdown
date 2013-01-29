@@ -1,50 +1,43 @@
-# MongoMapper for Devise
+# Dynamoid for Devise
 
-`mm-devise` will let you use [devise](http://github.com/plataformatec/devise) with [MongoMapper](http://github.com/jnunemaker/mongomapper).
+`devise-dynamoid` will let you use [devise](http://github.com/plataformatec/devise) with [Dynamoid](http://github.com/jnunemaker/mongomapper).
 
-`mm-devise` is intended for use with `Rails 3+` and `Devise 1.2` and above. It may work with earlier versions of devise.
+`devise-dynamoid` is intended for use with `Rails 3.2.x` and `Devise 2` and above. It may work with earlier versions of devise.
 
-This README only covers `mm-devise` specifics. Make sure to read the [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
-
-## Status update, June 2011
-
-Recently upgraded to (hopefully!) support Devise > 1.2 and MongoMapper 0.9.0.
+This README only covers `devise-dynamoid` specifics. Make sure to read the [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
 
 ## Installation
 
-Add `devise`, `mm-devise` and `mongo_mapper` gems to your Gemfile (your Rails app Gemfile).
+Add `devise`, `devise-dynamoid` and `dynamoid` gems to your Gemfile (your Rails app Gemfile).
 
-    gem 'mongo_mapper',           '~> 0.9.0'
-    # You'll want this to for better mongo driver performance
-    gem 'bson_ext'
-
-    gem 'devise',                 '~> 1.3.4'
-    gem 'mm-devise',              '~> 1.2.0'
+    gem 'dynamoid'
+    gem 'devise'
+    gem 'devise-dynamoid'
 
 Use bundler to install all required gems in your Rails 3 app
 
     bundle install
 
-Run the devise install generator, followed by the mm-devise model generator:
+Run the devise install generator, followed by the devise-dynamoid model generator:
 
     rails generate devise:install
-    rails generate mongo_mapper:devise MODEL
+    rails generate dynamoid:devise MODEL
 
 The devise install generator will install an initializer
 (`config/inititializer/devise.rb`) which describes ALL Devise's configuration
 options and you MUST take a look at it. Maker sure this line exists:
 
-    require 'devise/orm/mongo_mapper'
+    require 'devise/orm/dynamoid'
 
 NOTE: The model generator should do this automatically.
 
 To add Devise to any of your models using the generator:
 
-    rails generate mongo_mapper:devise MODEL
+    rails generate dynamoid:devise MODEL
 
 Example: create a User model for use with Devise
 
-    rails generate mongo_mapper:devise User
+    rails generate dynamoid:devise User
 
 Read the README for devise at [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
 
@@ -56,9 +49,9 @@ In the same container folder clone <code>devise</code> from github
 
 Example:
 
-<pre>git clone http://github.com/kristianmandrup/mm-devise.git
+<pre>git clone http://github.com/macteo/devise-dynamoid.git
 git clone http://github.com/plataformatec/devise.git
-cd mm-devise
+cd devise-dynamoid
 bundle install
 rake test</pre>
 
@@ -68,7 +61,7 @@ rake test</pre>
 
 ## Gem release (push to RubyGems)
 
-<pre>$ gem push pkg/mm-devis-xxxx.gem</pre>
+<pre>$ gem push pkg/devise-dynamoid-xxxx.gem</pre>
 
 ## Note on Patches/Pull Requests
 
@@ -82,21 +75,16 @@ rake test</pre>
 
 ## Maintainers
 
-*Kristian Mandrup*
+*Matteo Gavagnin*
 
-## Contributors
-
-*bmarini* - Updated to support MongoMapper 0.9 (June 2011)
-*bhbryant* - Fixed some issues and updated gem (Jan 2011)
-*Jared Morgan* - Created the dm-devise gem which was used as a template for the development of this gem.
 Also made suggestions for a few critical fixes and improvements in the code. Thanks :)
 
 ## Bugs and Feedback
 
-For *mm-devise* specific issues, please create an issue on GitHub at: [mm-devise issues](http://github.com/kristianmandrup/mm-devise/issues)
+For *devise-dynamoid* specific issues, please create an issue on GitHub at: [devise-dynamoid issues](http://github.com/macteo/devise-dynamoid/issues)
 
 ## Copyright
 
-Copyright (c) 2010 Kristian Mandrup. See LICENSE for details.
+Copyright (c) 2013 Matteo Gavagnin. See LICENSE for details.
 
 
