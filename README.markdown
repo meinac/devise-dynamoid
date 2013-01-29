@@ -47,7 +47,7 @@ Read the README for devise at [devise README](http://github.com/plataformatec/de
 ## Test Driven Development - extending this project
 
 To develop on this project using TDD, requires the following setup.
-Clone this project into a container folder, fx <code>/projects</code>, so you have fx <code>/projects/mm-devise</code>
+Clone this project into a container folder, fx <code>/projects</code>, so you have fx <code>/projects/devise-dynamoid</code>
 In the same container folder clone <code>devise</code> from github
 
 Example:
