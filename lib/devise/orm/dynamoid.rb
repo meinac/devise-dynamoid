@@ -1,4 +1,5 @@
-require 'orm_adapter/adapters/dynamoid'
+#require 'orm_adapter/adapters/dynamoid'
+require 'dynamoid/document'
 
-MongoMapper::Document::ClassMethods.send :include, Devise::Models
+Dynamoid::Document::ClassMethods.send :include, Devise::Models
 
